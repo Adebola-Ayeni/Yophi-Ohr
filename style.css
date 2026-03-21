@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey: #181818;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background-color: #000;
+    position: relative;
+}
+
+.logo {
+    padding: 10px 15px; 
+    text-transform: uppercase;
+}
+
+.logo1 {
+    color: #DC2626;
+}
+
+.logo2 {
+    color: #DC2626;
+}
+
+.searchbar {
+    display: block;
+    width: calc(100% - 30px);
+    margin: auto;
+    padding: 10px 15px;
+    border-radius: 999px;
+    background-color: var(--grey);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-family: "poppins", sans-serif;
+
+    position: sticky;
+    top: 10px;    /* Gap from the very top of the screen */
+    z-index: 100; /* Stays above the product grid */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+
+}
+
+.searchbar::placeholder {
+    font-family: 'poppins', sans-serif;
+}
+
+.promo-card {
+    display: flex;
+    width: calc(100% - 30px);
+    margin: auto;
+    margin-top: 15px;
+    background-color: var(--grey);
+    border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+    padding: 15px;
+    max-width: 1440px; 
+    margin: 0 auto;
+    /* margin-top: 0px; */
+    margin-bottom: 100px;
+}
+
+.product {
+    grid-column: span 2;
+    background-color: var(--grey);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.product img {
+    /* background-color: #fff; */
+}
+
+.product-name {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.product-price {
+    text-align: center;
+    font-size: 13px;
+    color: gray;
+}
+
+.product button {
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 999px;
+    margin: 10px 0;
+    border: 1px solid black;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+
+}
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 5px;
+    /* background-color: #000;  */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #333;
+    z-index: 2000;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px; /* Small text under icons */
+    gap: 4px;
+}
+
+.nav-item svg {
+    width: 22px;
+    height: 22px;
+    stroke: #fff; /* White icons */
+    transition: 0.3s;
+}
+
+/* Hover/Active Effect using your Logo Red */
+.nav-item:hover svg, 
+.nav-item:active svg {
+    stroke: #DC2626; 
+    transform: translateY(-2px);
+}
+
+.nav-item:hover span {
+    color: #DC2626;
+}
+
+/* ========================
+   MEDIA QUERIES
+======================== */
+@media (max-width: 1024px) {
+    .product {
+        grid-column: span 3;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        grid-column: span 4;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        grid-column: span 6;
+
+    }
+}
