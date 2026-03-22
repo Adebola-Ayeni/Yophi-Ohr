@@ -7,7 +7,7 @@
 :root {
     --grey: #F8F9FA;
     --purple: #4B2C5E;
-    --yellow: #E4B850;
+    --yellow: #C9972B;
 }
 
 a {
@@ -74,31 +74,34 @@ body {
 
 .banner {
     width: calc(100% - 30px);
-    margin: 20px auto;
+    margin: 0 auto 20px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
-
+section {
+    margin-bottom: 25px;
+}
 section h2 {
     color: var(--purple);
     font-size: 20px;
     margin: 0 15px;
-    background-color: var(--yellow);
-    border-radius: 999px;
-    text-align: center;
     text-transform: capitalize;
-    box-shadow:
-        0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    /* font-family: "Great Vibes", cursive; */
+}
+section .subtitle {
+    color: #6B7280;
+    font-size: 13px;
+    margin: 5px 15px 15px;
+    line-height: 1.5;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 10px;
+    row-gap: 20px;
     padding: 15px;
+    padding-top: 0;
     max-width: 1440px;
     margin: 0 auto;
     /* margin-top: 0px; */
@@ -137,7 +140,6 @@ section h2 {
 }
 
 .product-price {
-    text-align: left;
     font-size: 13px;
     color: green;
     text-align: center;
