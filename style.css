@@ -77,17 +77,20 @@ body {
     margin: 0 auto 20px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 section {
     margin-bottom: 25px;
 }
+
 section h2 {
     color: var(--purple);
     font-size: 20px;
     margin: 0 15px;
     text-transform: capitalize;
 }
+
 section .subtitle {
     color: #6B7280;
     font-size: 13px;
@@ -115,13 +118,18 @@ section .subtitle {
     /* padding: 10px; */
     text-align: center;
     box-shadow:
-        0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        0 2px 6px rgba(0, 0, 0, 0.05),
+        0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.product img:hover {
+    transform: translateY(-5px) scale(1.05);
 }
 
 .product img {
-    background: linear-gradient(to bottom, var(--purple), #F8F9F2);
+    /* background: linear-gradient(to bottom, var(--purple), #F8F9F2); */
     border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
 }
 
 .product-text-wrapper {
