@@ -46,7 +46,11 @@ body {
     color: var(--yellow);
     font-family: "Great Vibes", cursive;
 }
-
+.back-btn{
+    position: fixed;
+    left: 15px;
+    top: 15px;
+}
 .searchbar {
     display: block;
     width: calc(100% - 30px);
@@ -74,6 +78,7 @@ body {
 
 .banner {
     width: calc(100% - 30px);
+    max-width: 1000px;
     margin: 0 auto 20px;
     border-radius: 10px;
     overflow: hidden;
@@ -161,6 +166,42 @@ section .subtitle {
     color: var(--grey);
     font-family: "poppins", sans-serif;
     margin-top: 10px;
+}
+
+.product-overview-grid {
+    padding: 15px;
+
+}
+
+.product-overview-textcontent {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.05),
+        0 8px 20px rgba(0, 0, 0, 0.06);
+    margin-top: 10px;
+}
+
+.productinfo-name {
+    color: #2D1B36;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.productinfo-price {
+    font-size: 13px;
+    color: green;
+}
+
+.productinfo-img {
+    background: linear-gradient(to bottom, var(--purple), #F8F9F2);
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
 }
 
 .bottom-nav {
