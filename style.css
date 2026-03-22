@@ -79,7 +79,8 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
-section h2{
+
+section h2 {
     color: var(--purple);
     font-size: 20px;
     margin: 0 15px;
@@ -87,10 +88,12 @@ section h2{
     border-radius: 999px;
     text-align: center;
     text-transform: capitalize;
-        box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-    0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    /* font-family: "Great Vibes", cursive; */
 }
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -108,18 +111,20 @@ section h2{
     border-radius: 10px;
     /* padding: 10px; */
     text-align: center;
-    box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-    0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
     background: linear-gradient(to bottom, var(--purple), #fff);
     border-radius: 10px 10px 0 0;
 }
-.product-text-wrapper{
+
+.product-text-wrapper {
     padding: 0 10px 10px;
 }
+
 .product-name {
     color: #2D1B36;
     text-align: center;
@@ -137,7 +142,8 @@ section h2{
     color: green;
     text-align: center;
 }
-.product button{
+
+.product button {
     background-color: var(--purple);
     padding: 5px 10px;
     border: none;
