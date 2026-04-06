@@ -7,7 +7,7 @@
 :root {
     --grey: #F8F9FA;
     --purple: #4B2C5E;
-    --yellow: #C9972B;
+    --yellow: #E5B951;
 }
 
 a {
@@ -31,10 +31,21 @@ body {
     position: relative;
 }
 
+/* ========================
+   HEADER / UI
+======================== */
+header{
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    background-color: white;
+    position: fixed;
+    padding: 0 8.33%;
+    z-index: 1000;
+}
 .logo {
-    padding: 10px 15px;
-    text-align: center;
-
+    padding: 10px 0;
+    /* text-align: center; */
+    font-size: 1.3rem;
 }
 
 .logo1 {
@@ -46,11 +57,17 @@ body {
     color: var(--yellow);
     font-family: "Great Vibes", cursive;
 }
-.back-btn{
+
+.back-btn {
     position: fixed;
     left: 15px;
     top: 15px;
 }
+
+/* ========================
+   SEARCH
+======================== */
+
 .searchbar {
     display: block;
     width: calc(100% - 30px);
@@ -65,76 +82,98 @@ body {
 
     position: sticky;
     top: 10px;
-    /* Gap from the very top of the screen */
     z-index: 100;
-    /* Stays above the product grid */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
-
 }
 
 .searchbar::placeholder {
     font-family: 'poppins', sans-serif;
 }
 
+/* ========================
+   BANNER-GRID
+======================== */
+.banner-grid {
+    background-color: var(--yellow);
+    padding-top: 66px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.sub-banner-grid {
+    display: none;
+}
+
+.category {
+    display: none;
+}
+
 .banner {
-    width: calc(100% - 30px);
-    max-width: 1000px;
-    margin: 0 auto 20px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0px 7px rgba(0, 0, 0, 0.2); */
+    border-bottom-right-radius: 100px;
 }
+
+.contact {
+    display: none;
+}
+
+/* ========================
+   SECTIONS
+======================== */
 
 section {
     margin-bottom: 25px;
+    padding: 0 15px;
 }
 
 section h2 {
     color: var(--purple);
     font-size: 20px;
-    margin: 0 15px;
     text-transform: capitalize;
 }
 
 section .subtitle {
     color: #6B7280;
     font-size: 13px;
-    margin: 5px 15px 15px;
+    margin: 5px 0 15px;
     line-height: 1.5;
 }
+
+/* ========================
+   PRODUCT GRID (MOBILE FIRST)
+======================== */
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 10px;
     row-gap: 20px;
-    padding: 15px;
-    padding-top: 0;
     max-width: 1440px;
-    margin: 0 auto;
-    /* margin-top: 0px; */
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
 }
 
+/* MOBILE DEFAULT */
 .product {
-    grid-column: span 2;
+    grid-column: span 6;
+    /* 2 per row */
     background-color: #F8F9F2;
     border-radius: 10px;
-    /* padding: 10px; */
     text-align: center;
     box-shadow:
         0 2px 6px rgba(0, 0, 0, 0.05),
         0 8px 20px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.product img {
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
 }
 
 .product img:hover {
     transform: translateY(-5px) scale(1.05);
-}
-
-.product img {
-    /* background: linear-gradient(to bottom, var(--purple), #F8F9F2); */
-    border-radius: 10px 10px 0 0;
-    transition: transform 0.3s ease;
 }
 
 .product-text-wrapper {
@@ -168,9 +207,14 @@ section .subtitle {
     margin-top: 10px;
 }
 
+/* ========================
+   PRODUCT DETAILS
+======================== */
+
 .product-overview-grid {
     padding: 15px;
-
+    display: grid;
+    gap: 15px;
 }
 
 .product-overview-textcontent {
@@ -180,7 +224,6 @@ section .subtitle {
     box-shadow:
         0 2px 6px rgba(0, 0, 0, 0.05),
         0 8px 20px rgba(0, 0, 0, 0.06);
-    margin-top: 10px;
 }
 
 .productinfo-name {
@@ -204,6 +247,10 @@ section .subtitle {
     transition: transform 0.3s ease;
 }
 
+/* ========================
+   BOTTOM NAV
+======================== */
+
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -211,7 +258,6 @@ section .subtitle {
     right: 0;
     width: 100%;
     padding: 5px;
-    /* background-color: #000;  */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -226,9 +272,7 @@ section .subtitle {
     flex-direction: column;
     align-items: center;
     color: #fff;
-    text-decoration: none;
     font-size: 10px;
-    /* Small text under icons */
     gap: 4px;
 }
 
@@ -236,11 +280,9 @@ section .subtitle {
     width: 22px;
     height: 22px;
     stroke: #fff;
-    /* White icons */
     transition: 0.3s;
 }
 
-/* Hover/Active Effect using your Logo Red */
 .nav-item:hover svg,
 .nav-item:active svg {
     stroke: #DC2626;
@@ -252,25 +294,77 @@ section .subtitle {
 }
 
 /* ========================
-   MEDIA QUERIES
+   MEDIA QUERIES (MOBILE → DESKTOP)
 ======================== */
-@media (max-width: 1024px) {
-    .product {
-        grid-column: span 3;
 
-    }
-}
-
-@media (max-width: 768px) {
+/* Small tablets */
+@media (min-width: 480px) {
     .product {
         grid-column: span 4;
+        /* 3 per row */
+    }
 
+
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    section {
+        padding: 0 8.33%;
+    }
+
+    .product {
+        grid-column: span 3;
+        /* 4 per row */
+    }
+
+    .banner-grid {
+        display: grid;
+        padding: 30px 8.33%;
+        padding-top: 66px;
+        grid-template-columns: 1fr 4fr;
+        gap: 10px;
+
+    }
+
+    .sub-banner-grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .category {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+        background-color: #F8F9F2;
+        box-shadow: 0 0px 7px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .banner {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact {
+        display: block;
+        border-radius: 10px;
+        background-color: #F8F9F2;
+        box-shadow: 0 0px 7px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-overview-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 480px) {
+/* Desktop */
+@media (min-width: 1024px) {
     .product {
-        grid-column: span 6;
-
+        grid-column: span 2;
+        /* 6 per row */
     }
 }

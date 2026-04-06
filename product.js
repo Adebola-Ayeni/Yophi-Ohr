@@ -12,5 +12,5 @@ if (product) {
 }
 
 if (!product) {
-  document.body.innerHTML = "<h2>Product not found</h2>";
+  document.body.appendChild("<h2>Product not found</h2>");
 }
